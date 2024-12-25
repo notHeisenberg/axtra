@@ -80,3 +80,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+body[data-cursor="animated"] {
+  cursor: none;
+}
+
+body[data-cursor="default"] {
+  cursor: default;
+}
+
+/* Smooth cursor transitions */
+.animated-cursor-wrapper > div {
+  transition: all 0.2s ease;
+  transition-property: width, height, border;
+}
+
+/* Hide default cursor when using animated cursor */
+body[data-cursor="animated"] * {
+  cursor: none !important;
+}
+
+/* Optional: Add hover effects for interactive elements */
+body[data-cursor="animated"] a:hover ~ .animated-cursor-wrapper .circle,
+body[data-cursor="animated"] button:hover ~ .animated-cursor-wrapper .circle {
+  transform: scale(1.5);
+  background-color: rgba(var(--primary), 0.1);
+}
