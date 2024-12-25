@@ -27,7 +27,7 @@ export function NavigationMenuBar() {
                 <NavigationMenuTrigger className="group flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors hover:text-accent-foreground">
                   <TextAnimation text={data.title} />
                 </NavigationMenuTrigger>
-                <NavigationContent groups={data.groups} />
+                <NavigationContent groups={data?.groups} />
               </>
             )}
           </NavigationMenuItem>

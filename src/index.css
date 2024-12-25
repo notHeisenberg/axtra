@@ -100,9 +100,19 @@ body[data-cursor="animated"] * {
   cursor: none !important;
 }
 
-/* Optional: Add hover effects for interactive elements */
 body[data-cursor="animated"] a:hover ~ .animated-cursor-wrapper .circle,
 body[data-cursor="animated"] button:hover ~ .animated-cursor-wrapper .circle {
   transform: scale(1.5);
   background-color: rgba(var(--primary), 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@supports not (scroll-behavior: smooth) {
+  html {
+    overflow: auto;
+  }
 }

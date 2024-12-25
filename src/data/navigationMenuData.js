@@ -83,6 +83,7 @@ export const navigationMenuData = {
         title: "Team",
         groups: [
             {
+                heading: "Team",
                 items: [
                     { title: "Team Members", href: "/team" },
                     { title: "Team Details", href: "/team-details" }
